@@ -47,7 +47,11 @@ function countLettersInEachWord(sentence) {
   const wordCounter = {};
   let stringArray = sentence.split(" ");
   for (let word of stringArray) {
-    wordCounter[word] = word.length;
+    if (word.length === 0) {
+      return wordCounter;
+    } else {
+      wordCounter[word] = word.length;
+    }
   }
   return wordCounter;
 }
