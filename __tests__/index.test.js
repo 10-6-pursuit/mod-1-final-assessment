@@ -4,7 +4,7 @@ const {
   countLettersInEachWord,
 } = require('../index');
 
-test("wordsStartingWithCapital should return an array of words starting with a capital letter", () => {
+test.only("wordsStartingWithCapital should return an array of words starting with a capital letter", () => {
   // Test case 1: stringsArray contains words starting with a capital letter
   expect(wordsStartingWithCapital(["Apple", "Banana", "Cat"])).toEqual([
     "Apple",
