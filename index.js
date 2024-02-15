@@ -49,19 +49,21 @@ function sumOfOddNumbersGreaterThanTen(numbersArray) {
  * @example
  * countLettersInEachWord("The quick brown fox")
  * // Returns: { "The": 3, "quick": 5, "brown": 5, "fox": 3 }
+ *  
+ * create a obj to store count 
+ * 
+ * 
  */
+
+
+
+
 function countLettersInEachWord(sentence) {
   let result = {}
 
-  for (let letter of sentence) {
-
-    if (result[letter]) {
-      result[letter]++
-    }else {
-      result[letter]=1
-    }
-  }
-  
+  for (let word of sentence) {
+   
+  }  
   return result
 }
 
