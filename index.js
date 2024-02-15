@@ -18,7 +18,6 @@ function wordsStartingWithCapital(stringsArray) {
   return newArr;
 }
 
-console.log(wordsStartingWithCapital(["Apple", "banana", "Cat", "dog"]));
 
 /**
  * Calculates the sum of all odd numbers greater than 10 in the given array.
@@ -32,7 +31,6 @@ function sumOfOddNumbersGreaterThanTen(numbersArray) {
   return numbersArray.filter(x => x > 10 && x % 2 !== 0).reduce((acc, currVal) => acc + currVal, 0);
 }
 
-console.log(sumOfOddNumbersGreaterThanTen([5, 15, 10, 13, 20]))
 
 /**
  * Returns an object containing a count of how many letters are in each word in the given sentence.
@@ -53,11 +51,10 @@ function countLettersInEachWord(sentence) {
   for (let i = 0; i < wordArray.length; i++) {
     wordLetterCount[wordArray[i]] = wordArray[i].length;
   }
-  
+
   return wordLetterCount;
 }
 
-console.log(countLettersInEachWord("The quick brown fox"));
 
 module.exports = {
   wordsStartingWithCapital,
