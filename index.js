@@ -18,7 +18,14 @@ function wordsStartingWithCapital(stringsArray) {
  * sumOfOddNumbersGreaterThanTen([5, 15, 10, 13, 20])
  * // Returns: 28
  */
-function sumOfOddNumbersGreaterThanTen() {}
+function sumOfOddNumbersGreaterThanTen(numbersArray) {
+  return numbersArray.reduce((sum, num) => {
+    if (num > 10 && num % 2 !== 0) {
+      sum += num;
+    }
+    return sum;
+  }, 0);
+}
 
 /**
  * Returns an object containing a count of how many letters are in each word in the given sentence.
@@ -40,6 +47,27 @@ module.exports = {
 
 
 
+
+
+
+/**
+* Returns an object containing a count of how many letters are in each word in the given sentence.
+* @param {string} sentence - A string representing a sentence.
+* @returns {Object.<string, number>} - An object where keys are words and values are the counts of letters in each word.
+*/
+function countLettersInEachWord(sentence) {
+  const wordsArray = sentence.split(' ');
+  return wordsArray.reduce((acc, word) => {
+    acc[word] = word.length;
+    return acc;
+  }, {});
+}
+
+module.exports = {
+  wordsStartingWithCapital,
+  sumOfOddNumbersGreaterThanTen,
+  countLettersInEachWord,
+};
 
 
 
