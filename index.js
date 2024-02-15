@@ -6,7 +6,19 @@
  * wordsStartingWithCapital(["Apple", "banana", "Cat", "dog"])
  * // Returns: ["Apple", "Cat"]
  */
-function wordsStartingWithCapital() {}
+function wordsStartingWithCapital(stringsArray) {
+  let result = []
+
+    for(let word of stringsArray) {
+      if (/^[A-Z]/.test(word)) {
+        result.push(word)
+      }
+    }
+
+    return result;
+  }
+
+ 
 
 /**
  * Calculates the sum of all odd numbers greater than 10 in the given array.
@@ -16,7 +28,19 @@ function wordsStartingWithCapital() {}
  * sumOfOddNumbersGreaterThanTen([5, 15, 10, 13, 20])
  * // Returns: 28
  */
-function sumOfOddNumbersGreaterThanTen() {}
+// create an array to hold all numbers greater than 10
+// itterate over numbersArray
+//calculate the numbers greater than 10
+//return result
+function sumOfOddNumbersGreaterThanTen(numbersArray) {
+  let sum = 0
+    for ( let num of numbersArray ) {
+        if (num % 2 !== 0 && num > 10) {
+          sum += num
+        }
+    }
+    return sum 
+}
 
 /**
  * Returns an object containing a count of how many letters are in each word in the given sentence.
@@ -26,7 +50,20 @@ function sumOfOddNumbersGreaterThanTen() {}
  * countLettersInEachWord("The quick brown fox")
  * // Returns: { "The": 3, "quick": 5, "brown": 5, "fox": 3 }
  */
-function countLettersInEachWord() {}
+function countLettersInEachWord(sentence) {
+  let result = {}
+
+  for (let letter of sentence) {
+
+    if (result[letter]) {
+      result[letter]++
+    }else {
+      result[letter]=1
+    }
+  }
+  
+  return result
+}
 
 module.exports = {
   wordsStartingWithCapital,
