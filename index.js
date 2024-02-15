@@ -6,7 +6,21 @@
  * wordsStartingWithCapital(["Apple", "banana", "Cat", "dog"])
  * // Returns: ["Apple", "Cat"]
  */
-function wordsStartingWithCapital() {}
+function wordsStartingWithCapital(stringsArray) {
+
+  let newArr = [];
+
+  for(let i = 0; i<stringsArray.length; i++){
+
+     if(stringsArray[i][0] === stringsArray[i][0].toUpperCase()){
+
+      newArr.push(stringsArray[i]);
+
+    }
+  }
+
+  return newArr;
+}
 
 /**
  * Calculates the sum of all odd numbers greater than 10 in the given array.
