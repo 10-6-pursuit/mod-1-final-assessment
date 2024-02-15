@@ -42,8 +42,21 @@ function sumOfOddNumbersGreaterThanTen(arr) {
  * countLettersInEachWord("The quick brown fox")
  * // Returns: { "The": 3, "quick": 5, "brown": 5, "fox": 3 }
  */
-function countLettersInEachWord() {}
+function countLettersInEachWord(str) {
 
+  if (str.length === 0) return {}
+
+  let countObj = {};
+  let splitStr = str.split(" ");
+  
+  for (let word of splitStr) {
+    if (!countObj[word]) {
+      countObj[word] = word.length;
+    }
+  }
+
+  return countObj;
+}
 module.exports = {
   wordsStartingWithCapital,
   sumOfOddNumbersGreaterThanTen,
