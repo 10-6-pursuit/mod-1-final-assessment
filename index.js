@@ -6,7 +6,10 @@
  * wordsStartingWithCapital(["Apple", "banana", "Cat", "dog"])
  * // Returns: ["Apple", "Cat"]
  */
-function wordsStartingWithCapital() {}
+const wordsStartingWithCapital = (stringsArray) => stringsArray.filter((elem) => elem[0] === elem[0].toUpperCase());
+
+
+console.log(wordsStartingWithCapital(["Apple", "banana", "Cat", "dog"]))
 
 /**
  * Calculates the sum of all odd numbers greater than 10 in the given array.
