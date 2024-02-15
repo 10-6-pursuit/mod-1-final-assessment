@@ -7,8 +7,9 @@
  * // Returns: ["Apple", "Cat"]
  */
 function wordsStartingWithCapital(array) {
+  
+if(Array.isArray(array)){return array.filter(el=>el[0].toUpperCase()===el[0]);}
 
-return array.filter(el=>el[0].toUpperCase()===el[0]);
 
 
 }
@@ -22,7 +23,10 @@ console.log(wordsStartingWithCapital(["Apple", "banana", "Cat", "dog"]))
  * sumOfOddNumbersGreaterThanTen([5, 15, 10, 13, 20])
  * // Returns: 28
  */
-function sumOfOddNumbersGreaterThanTen() {}
+function sumOfOddNumbersGreaterThanTen(array) {
+  if(Array.isArray(array)){return array.filter((element)=>element%2!==0&&element>10).reduce((acc,cur)=>acc+cur)}
+}
+console.log(sumOfOddNumbersGreaterThanTen([5, 15, 10, 13, 20]))
 
 /**
  * Returns an object containing a count of how many letters are in each word in the given sentence.
