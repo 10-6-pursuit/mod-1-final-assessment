@@ -42,7 +42,22 @@ console.log(sumOfOddNumbersGreaterThanTen([5, 15, 10, 13, 20]))
  * countLettersInEachWord("The quick brown fox")
  * // Returns: { "The": 3, "quick": 5, "brown": 5, "fox": 3 }
  */
-function countLettersInEachWord() {}
+function countLettersInEachWord(sentence) {
+  let wordArray = sentence.split(" ");
+  let wordLetterCount = {};
+
+  if (sentence === "") {
+    return wordLetterCount;
+  }
+
+  for (let i = 0; i < wordArray.length; i++) {
+    wordLetterCount[wordArray[i]] = wordArray[i].length;
+  }
+  
+  return wordLetterCount;
+}
+
+console.log(countLettersInEachWord("The quick brown fox"));
 
 module.exports = {
   wordsStartingWithCapital,
