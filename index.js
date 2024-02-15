@@ -19,7 +19,9 @@ console.log(wordsStartingWithCapital(["Apple", "banana", "Cat", "dog"]))
  * sumOfOddNumbersGreaterThanTen([5, 15, 10, 13, 20])
  * // Returns: 28
  */
-function sumOfOddNumbersGreaterThanTen() {}
+const sumOfOddNumbersGreaterThanTen = (numbersArray) => numbersArray.filter((nums) => (nums > 10) && (nums & 2 !== 0)).reduce((a, b) => a + b);
+
+console.log(sumOfOddNumbersGreaterThanTen([5, 15, 10, 13, 20]));
 
 /**
  * Returns an object containing a count of how many letters are in each word in the given sentence.
