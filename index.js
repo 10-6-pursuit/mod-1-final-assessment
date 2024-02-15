@@ -35,42 +35,14 @@ function sumOfOddNumbersGreaterThanTen(numbersArray) {
  * countLettersInEachWord("The quick brown fox")
  * // Returns: { "The": 3, "quick": 5, "brown": 5, "fox": 3 }
  */
-function countLettersInEachWord() {}
+function countLettersInEachWord(sentence) { const wordsArray = sentence.split(' ');
+return wordsArray.reduce((acc, word) => {
+  acc[word] = word.length;
+  return acc;
+}, {});}
 
 module.exports = {
   wordsStartingWithCapital,
   sumOfOddNumbersGreaterThanTen,
   countLettersInEachWord,
 };
-
-
-
-
-
-
-
-
-/**
-* Returns an object containing a count of how many letters are in each word in the given sentence.
-* @param {string} sentence - A string representing a sentence.
-* @returns {Object.<string, number>} - An object where keys are words and values are the counts of letters in each word.
-*/
-function countLettersInEachWord(sentence) {
-  const wordsArray = sentence.split(' ');
-  return wordsArray.reduce((acc, word) => {
-    acc[word] = word.length;
-    return acc;
-  }, {});
-}
-
-module.exports = {
-  wordsStartingWithCapital,
-  sumOfOddNumbersGreaterThanTen,
-  countLettersInEachWord,
-};
-
-
-
-
-
-
