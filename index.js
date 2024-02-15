@@ -24,7 +24,15 @@ function wordsStartingWithCapital(arr) {
  * sumOfOddNumbersGreaterThanTen([5, 15, 10, 13, 20])
  * // Returns: 28
  */
-function sumOfOddNumbersGreaterThanTen() {}
+function sumOfOddNumbersGreaterThanTen(arr) {
+  let sum = 0;
+
+  for (let num of arr) {
+    if (num > 10 && num % 2 === 1) sum +=num;
+  }
+
+  return sum;
+}
 
 /**
  * Returns an object containing a count of how many letters are in each word in the given sentence.
