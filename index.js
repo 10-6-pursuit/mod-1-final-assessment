@@ -6,7 +6,9 @@
  * wordsStartingWithCapital(["Apple", "banana", "Cat", "dog"])
  * // Returns: ["Apple", "Cat"]
  */
-function wordsStartingWithCapital() {}
+function wordsStartingWithCapital(stringsArray) {
+  return stringsArray.filter(word => /^[A-Z]/.test(word));
+}
 
 /**
  * Calculates the sum of all odd numbers greater than 10 in the given array.
@@ -33,3 +35,14 @@ module.exports = {
   sumOfOddNumbersGreaterThanTen,
   countLettersInEachWord,
 };
+
+
+
+
+
+
+
+
+
+
+
