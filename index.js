@@ -8,9 +8,9 @@
  */
 function wordsStartingWithCapital(array) {
   
-if(Array.isArray(array)){return array.filter(el=>el[0].toUpperCase()===el[0]);}
-
-
+  if(Array.isArray(array)){
+    return array.filter(el=>el[0].toUpperCase()===el[0]);
+  }
 
 }
 console.log(wordsStartingWithCapital(["Apple", "banana", "Cat", "dog"]))
@@ -24,8 +24,15 @@ console.log(wordsStartingWithCapital(["Apple", "banana", "Cat", "dog"]))
  * // Returns: 28
  */
 function sumOfOddNumbersGreaterThanTen(array) {
-  if(Array.isArray(array)){return array.filter((element)=>element%2!==0&&element>10).reduce((acc,cur)=>acc+cur)}
+
+  if(array){
+
+    return array.filter((element)=>element%2!==0&&element>10).reduce((acc,cur)=>acc+cur,0)
+  
+  }
+
 }
+
 console.log(sumOfOddNumbersGreaterThanTen([5, 15, 10, 13, 20]))
 
 /**
@@ -36,7 +43,23 @@ console.log(sumOfOddNumbersGreaterThanTen([5, 15, 10, 13, 20]))
  * countLettersInEachWord("The quick brown fox")
  * // Returns: { "The": 3, "quick": 5, "brown": 5, "fox": 3 }
  */
-function countLettersInEachWord() {}
+function countLettersInEachWord(string) {
+
+  let obj={}
+
+  if(string){
+
+    let arrayOfWords= string.split(` `);
+
+    for(let word of arrayOfWords ){
+
+      obj[word]=word.length;
+    }
+  }
+  return obj;
+
+}
+console.log(countLettersInEachWord("The quick brown fox"))
 
 module.exports = {
   wordsStartingWithCapital,
