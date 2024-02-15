@@ -30,7 +30,24 @@ function wordsStartingWithCapital(stringsArray) {
  * sumOfOddNumbersGreaterThanTen([5, 15, 10, 13, 20])
  * // Returns: 28
  */
-function sumOfOddNumbersGreaterThanTen() {}
+function sumOfOddNumbersGreaterThanTen(numbersArray) {
+
+  let sum = 0;
+
+  for(let i = 0; i<numbersArray.length; i++){
+
+    if(numbersArray[i]>10 && numbersArray[i] % 2 === 1){
+
+
+      sum += numbersArray[i]
+
+
+    }
+  }
+
+  return sum ;
+
+}
 
 /**
  * Returns an object containing a count of how many letters are in each word in the given sentence.
@@ -40,7 +57,25 @@ function sumOfOddNumbersGreaterThanTen() {}
  * countLettersInEachWord("The quick brown fox")
  * // Returns: { "The": 3, "quick": 5, "brown": 5, "fox": 3 }
  */
-function countLettersInEachWord() {}
+function countLettersInEachWord(sentence) {
+
+  let arr = sentence.split(' ');
+  
+  let obj = {};
+  if(sentence === ''){
+    return obj;
+  }
+
+  for(let i = 0 ; i<arr.length; i++){
+
+    obj[arr[i]] = arr[i].length
+  
+  }
+
+  return obj;
+}
+
+console.log(countLettersInEachWord("The quick brown fox"));
 
 module.exports = {
   wordsStartingWithCapital,
